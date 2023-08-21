@@ -1,10 +1,10 @@
 function bubbleSort(arr) {
-    for (let i = 0; i < arr.length; ++i) {
-        for (let j = 0; j < arr.length; ++j) {
-            let currentItem = arr[j], nextItem = arr[j + 1];
+    for (let i = 0; i < arr.length - 1; ++i) {
+        for (let j = i + 1; j < arr.length; ++j) {
+            let currentItem = arr[i], nextItem = arr[j];
             if (currentItem > nextItem) {
-                arr[j + 1] = currentItem;
-                arr[j] = nextItem;
+                arr[i] = nextItem;
+                arr[j] = currentItem;
             }
         }
     }
